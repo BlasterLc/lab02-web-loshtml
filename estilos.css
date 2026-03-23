@@ -191,32 +191,64 @@ main {
   text-align: right;
 }
 
-
 .contenedor-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .badge {
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
 }
 
-
-.lenguaje { background-color: #007bff; } 
-.framework { background-color: #28a745; } 
-.motor { background-color: #6f42c1; }     
-.db { background-color: #fd7e14; }      
+.lenguaje {
+  background-color: #007bff;
+}
+.framework {
+  background-color: #28a745;
+}
+.motor {
+  background-color: #6f42c1;
+}
+.db {
+  background-color: #fd7e14;
+}
 .habilidades {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .habilidades h2 {
-    font-size: 1.8rem;
-    color: #333;
+  font-size: 1.8rem;
+  color: #333;
+}
+/*aqui coloque los estilos de tutorial.html los nuevs*/
+.banner-tutorial {
+  background-color: #2179fce7;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+.btn-tutorial {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fbfdfd;
+  font-weight: bold;
+}
+/*Tuve que crear otra diseño de tarjeta por el anterior sobreescribia las propiedades
+de mis titulos, generando que los h2 no me permitian cambiar el font-sizew*/
+.tarjeta-tutorial {
+  background: white;
+  padding: 10px;
+  margin-bottom: 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+.tarjeta-tutorial h2 {
+  font-size: 20px;
 }
