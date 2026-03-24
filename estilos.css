@@ -247,8 +247,44 @@ de mis titulos, generando que los h2 no me permitian cambiar el font-sizew*/
   margin-bottom: 40px;
   border-radius: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  text-align: left;
 }
-.tarjeta-tutorial h2 {
+.titulo-seccion {
+  text-align: left;
   font-size: 20px;
+}
+
+.tarjeta-tutorial img {
+  width: 40%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  border-color: #0e0909;
+  border-radius: 10cm;
+  display: block;
+  margin: 0 auto;
+}
+.imagenes-tutorial {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  margin: 40px 0;
+}
+
+.imagenes-tutorial img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+.imagen-tutorial {
+  margin-top: 40px;
+  margin: 40px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.imagen-tutorial img {
+  width: 1000px;
+  height: auto;
+  border-color: #0e0909;
+  border-radius: 0;
 }

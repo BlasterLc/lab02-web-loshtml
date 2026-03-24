@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../estilos.css" />
+  </head>
+  <body>
+    <header class="banner-tutorial">
+      <h1>Instalacion y ejecucion de Docker</h1>
+      <a href="../index.html" class="btn-tutorial">← Volver</a>
+    </header>
+    <main>
+      <!--instalacion Docker en windows-->
+      <section class="tarjeta-tutorial">
+        <!--Primer parte-->
+        <h2 class="titulo-centrado">Tutorial: instalar Docker en Windows</h2>
+        <img src="../img/logodocker.png" />
+        <h3>1.Descargar Docker Desktop</h3>
+        <ul class="lista-fortalezas">
+          <li>
+            Abrir un navegador y entrar a: https://www.docker.com/get-started/
+          </li>
+          <li>
+            Buscar el botón “Download Docker Desktop” y descargar el archivo
+            Docker para tu sistema operativo
+          </li>
+        </ul>
+        <div class="imagenes-tutorial">
+          <img src="../img/Imgtutorial/Paso1.png" />
+          <img src="../img/Imgtutorial/paso2.png" />
+        </div>
+
+        <!--Segunda parte-->
+        <h3 class="titulo-seccion">2.Instalar Docker Desktop</h3>
+        <ul class="lista-fortalezas">
+          <li>Ejecutar Docker Desktop Installer.exe.</li>
+          <li>
+            En el asistente de instalación, aceptar los términos y dejar la
+            opción por defecto de usar WSL 2 (si aparece).
+          </li>
+          <li>Pulsar Next / Install hasta finalizar.</li>
+          <li>
+            Al terminar, pulsar Close y reiniciar el equipo si el instalador lo
+            solicita.
+          </li>
+          <li>
+            <div class="imagenes-tutorial">
+              <img src="../img/Imgtutorial/Paso3.png" />
+            </div>
+          </li>
+        </ul>
+
+        <!--Tercera parte-->
+        <h3 class="titulo-seccion">3.Primer arranque y prueba rápida</h3>
+        <ul class="lista-fortalezas">
+          <li>Abrir Docker Desktop desde el menú Inicio.</li>
+          <li>
+            Esperar hasta que aparezca el estado como Running (suele mostrar un
+            ícono de ballena activa en la bandeja).
+          </li>
+          <li>
+            <div class="imagen-tutorial">
+              <img src="../img/Imgtutorial/paso4.png" />
+            </div>
+          </li>
+          <li>
+            Abrir Terminal o PowerShell y ejecutar “docker run hello-world"
+          </li>
+          <li>
+            La primera vez descargará la imagen hello-world desde Docker Hub y
+            luego mostrará un mensaje explicando que Docker se ejecutó
+            correctamente.
+          </li>
+        </ul>
+      </section>
+
+      <!--Aqui puse las dos fotos apartes para que se vean mas grandes tomando la clase creada en el index-->
+      <section class="imagen-principal">
+        <img src="../img/Imgtutorial/paso5.png" alt="Ejecucion Docker" />
+      </section>
+
+      <!--Aqui no se si realize una mala practica pero dividi las 2 fotos en secciones distintas ya al 
+          ponerlas en la misma seccion se ponian muy juntas-->
+      <section class="imagen-principal">
+        <img src="../img/Imgtutorial/paso6.png" alt="Ejecucion Docker" />
+      </section>
+
+      <!--Primer contenedor web sencillo-->
+      <section class="tarjeta-tutorial">
+        <h2 class="titulo-centrado">
+          Tutorial: primer contenedor web sencillo
+        </h2>
+        <!--parte 1-->
+        <h3 class="titulo-seccion">Crear carpeta del proyecto</h3>
+        <ul class="lista-fortalezas">
+          <li>Crear una carpeta, por ejemplo: C:\docker-lab-web.</li>
+          <li>
+            Dentro, crear un archivo index.html con una página muy simple, por
+            ejemplo:
+          </li>
+          <li>
+            <div class="imagenes-tutorial">
+              <img src="../img/Imgtutorial/codigohtmlejemplo.png" />
+            </div>
+          </li>
+          <li>
+            Crear un Dockerfile sencillo, en la misma carpeta C:\docker-lab-web,
+            crear un archivo llamado Dockerfile (sin extensión) con el siguiente
+            contenido:
+          </li>
+          <li>
+            <div class="imagenes-tutorial">
+              <img src="../img/Imgtutorial/Dockefile.png" />
+            </div>
+          </li>
+          <li>
+            Construir la imagen, en PowerShell o cmd, ir a la carpeta del
+            proyecto y luego escribe “docker build -t mi-web-html .”
+          </li>
+          <li>
+            Esto descargará la imagen base nginx:alpine (si no está) y generará
+            una imagen propia.
+          </li>
+        </ul>
+      </section>
+
+      <!--Aqui otra vez abri otra seccion para que la foto de la terminal se vea mejor-->
+      <section class="imagen-principal">
+        <img src="../img/Imgtutorial/terminal.png" alt="Terminal" />
+      </section>
+      <section class="tarjeta-tutorial">
+        <ul class="lista-fortalezas">
+          <li>
+            Ejecutar el contenedor publicando el puerto 80 del contenedor al
+            8080 del host, para ello usa
+            <strong
+              >run -d -p 8080:80 --name mi-web-container mi-web-html</strong
+            >
+          </li>
+          <!--esta es la foto de la que mande mensaje para cambiar-->
+          <li>
+            <div class="imagenes-tutorial">
+              <img src="../img/Imgtutorial/contenedor_ejecucion.png" />
+            </div>
+          </li>
+          <li>
+            <strong>-d: modo “detached” (en segundo plano).</strong>
+          </li>
+          <li>
+            <strong
+              >-p 8080:80: mapear puerto 8080 de tu PC al 80 del
+              contenedor.</strong
+            >
+          </li>
+          <li>
+            Abrir el navegador usando <strong>//localhost:8080</strong>,
+            deberías ver tu página index.html servida desde el contenedor.
+          </li>
+          <li>
+            Para detener el contenedor puedes usar
+            <strong>stop mi-web-container</strong> y para eliminarlo
+            <strong> rm mi-web-container</strong>
+          </li>
+        </ul>
+      </section>
+      <section class="imagen-principal">
+        <img src="../img/Imgtutorial/final.png" alt="final" />
+      </section>
+    </main>
+  </body>
+</html>
