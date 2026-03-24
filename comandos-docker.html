@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comandos de Docker</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="banner-principal">
+        <h1>Comandos de Docker</h1>
+        <nav class="menu-navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="instalacion-docker.html">Instalación Docker</a>            
+            <a href="comandos-docker.html">Comandos Docker</a>
+        </nav>
+    </header>
+    <main>
+        <section class="tarjeta-comandos">
+            <h2>Comandos Básicos</h2>
+            <ul class="lista-comandos">
+                <li><strong>docker --help: </strong>Entrega información sobre Docker.</li>
+                <li><strong>docker info: </strong>Entrega información general sobre el sistema.</li>
+                <li><strong>docker build -t &lt;image_name&gt;: </strong>Arma una imagen a partir de un Dockerfile</li>
+                <li><strong>docker images: </strong>Lista las imágenes locales.</li>
+                <li><strong>docker rmi &lt;image_name&gt;: </strong>Elimina una imagen.</li>
+                <li><strong>docker image prune: </strong>Remueve todas las imágenes no usadas.</li>
+                <li><strong>docker run --name &lt;container_name&gt; &lt;image_name&gt;: </strong>Crea y ejecuta un contenedor a partir de una imagen.</li>
+                <li><strong>docker run -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt: ;</strong>Ejecuta un contenedor y asigna un puerto para el host.</li>
+                <li><strong>docker run -d &lt;image_name&gt;: </strong>Ejecuta un contenedor en segundo plano.</li>
+                <li><strong>docker start &lt;container_name&gt;: </strong>Inicia un contenedor.</li>
+                <li><strong>docker stop &lt;container_name&gt;: </strong>Detiene un contenedor.</li>
+                <li><strong>docker rm &lt;container_name&gt;: </strong>Elimina un contenedor detenido.</li>
+                <li><strong>docker exec -it &lt;container_name&gt; sh: </strong>Abre una terminal dentro de un contenedor.</li>
+                <li><strong>docker ps: </strong>Lista los contenedores activos.</li>
+                <li><strong>docker ps --all: </strong>Lista todos los contenedores.</li>
+        </section>
+        </main>
+</body>
+</html>
